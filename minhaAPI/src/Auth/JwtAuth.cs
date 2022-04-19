@@ -11,8 +11,6 @@ namespace minhaAPI.src.Auth
     {
         public static string GenerateToken(User user)
         {
-
-
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(Startup.StaticConfig.GetSection("JwtConfig:Key").Value);
             var tokenDescriptor = new SecurityTokenDescriptor
